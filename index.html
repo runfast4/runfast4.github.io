@@ -7,6 +7,11 @@
 		a:link, a:visited {color: white;background-color: #66503b;text-decoration: none;}
 		a:hover, a:active {color: #66503b;background-color: white;}
 
+		#map {
+        	height: 300px;
+        	width: 500px;
+      		}
+			
 		img {border: 0px;}
 		ul {list-style: none;}
 		li {padding: 5px 0px;}
@@ -42,6 +47,9 @@
 		.ft0_5em {font-size: .5em;}
 		.ftBold {font-weight: bold;}
 		.ftSkinny {font-weight: lighter;}
+		#map {
+      		 height: 100%;
+     		}
 	--></style>
 	</head>
 
@@ -70,9 +78,15 @@
     <script>
       var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+        var myLatLng = {lat: 35.08795, lng: -92.4912};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: myLatLng
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Cam lives here!'
         });
       }
     </script>
