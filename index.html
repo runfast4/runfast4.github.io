@@ -13,11 +13,12 @@
 		<h6>This is my test site. I am trying to learn HTML and python.</h6>
 		<br2>
 		<h4>Where I work:</h4><a href="http://www.liveramp.com">LiveRamp</a>
-	   <div id="map"></div>
+		<br4>
+		<div id="map"></div>
     <script>
       var map;
       function initMap() {
-        var myLatLng = {lat: 35.084981, lng: -92.517143};
+        var myLatLng = {lat: 35.08795, lng: -92.4912};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 18,
           center: myLatLng
@@ -25,8 +26,8 @@
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
-          title: 'Gon, the teacher, lives here!'<script>
-              );
+          title: 'Cam lives here!'
+        });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSXaxzVEWA2JMi5l3iYd2qxU35lIcq3U8&callback=initMap"
